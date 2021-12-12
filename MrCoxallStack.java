@@ -29,10 +29,10 @@ public final class MrCoxallStack {
     /**
     * Pops the top number off of the ArrayList.
     *
-    * @param return returns wheather or not the "pop" was successful
+    * @return returns wheather or not the "pop" was successful
     */
     public String pop() {
-        String returnValue;
+        final String returnValue;
         if (stackAsArray.size() > 0) {
             stackAsArray.remove(0);
             returnValue = "yes";
