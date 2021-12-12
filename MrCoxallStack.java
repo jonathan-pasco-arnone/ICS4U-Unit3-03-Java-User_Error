@@ -28,6 +28,8 @@ public final class MrCoxallStack {
 
     /**
     * Pops the top number off of the ArrayList.
+    *
+    * @param return returns wheather or not the "pop" was successful
     */
     public String pop() {
         String returnValue;
