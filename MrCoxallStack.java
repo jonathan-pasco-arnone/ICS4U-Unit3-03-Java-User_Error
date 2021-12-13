@@ -31,14 +31,15 @@ public final class MrCoxallStack {
     *
     * @return returns wheather or not the "pop" was successful
     */
-    public String pop() {
-        final String returnValue;
+    public int pop() {
+        final int returnValue;
         if (stackAsArray.size() > 0) {
+            final int poppedNumber = stackAsArray.get(0);
             stackAsArray.remove(0);
-            returnValue = "yes";
+            returnValue = poppedNumber;
         } else {
             System.out.println("Stack is empty, cannot pop");
-            returnValue = "no";
+            returnValue = -1;
         }
         return returnValue;
     }

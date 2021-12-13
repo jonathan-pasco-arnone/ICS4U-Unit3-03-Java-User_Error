@@ -37,7 +37,7 @@ final class UserError {
         // use MrCoxallStack class
         final MrCoxallStack aStack = new MrCoxallStack();
         final String addedNewNumber = "Added ";
-        final String popNumber = "Popped the top number";
+        final String popNumber = "Popped ";
         final String newStack = "\nNew Stack: ";
         final String failedPush = "Cannot add to stack, it is not an integer";
         // Create scanner objects for inputs.
@@ -106,8 +106,9 @@ final class UserError {
         System.out.println("\n----- Pop -------\n");
 
         // Removing the top number
-        if (aStack.pop().equals("yes")) {
-            System.out.println(popNumber);
+        final int poppedNumber = aStack.pop();
+        if (poppedNumber != -1) {
+            System.out.println(popNumber + poppedNumber);
             System.out.println(newStack);
             aStack.showStack();
         }
